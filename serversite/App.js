@@ -41,5 +41,10 @@ mongoose.connect(URI,OPTION).then((res)=>{
 //Routin back-end
 App.use("/api/v1",route)
 
+// Undefined Route Implemetn
+App.use("*",(req,res)=>{
+    res.status(400).json({status:"fail",data:"Not Found"})
+})
+
 
 module.exports=App;

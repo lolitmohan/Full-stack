@@ -1,19 +1,16 @@
-import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ReadPage from "./pages/ReadPage.jsx";
-import CreatePage from "./pages/CreatePage.jsx";
-import UpdatePage from "./pages/UpdatePage.jsx";
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CreateForm from './Component/CreateForm';
+import Products from './Pages/Products';
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<ReadPage/>}/>
-                <Route path="/create" element={<CreatePage/>}/>
-                <Route path="/update/:id" element={<UpdatePage/>}/>
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Products/>}/>
+          <Route path='/createForm' element={<CreateForm/>}/>
+        </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
